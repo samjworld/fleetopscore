@@ -1,0 +1,11 @@
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fleet_telemetry
+    username: fleet_user
+    password: fleet_password

@@ -1,0 +1,8 @@
+{
+  "name": "FleetOps",
+  "description": "A comprehensive fleet management solution featuring real-time tracking, telemetry analysis, and maintenance scheduling.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}

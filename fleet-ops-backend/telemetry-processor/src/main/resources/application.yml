@@ -1,0 +1,22 @@
+
+server:
+  port: 8082
+
+spring:
+  application:
+    name: telemetry-processor
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: telemetry-processor-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.fleetops.common.events"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fleet_telemetry
+    username: fleet_user
+    password: fleet_password
+  flyway:
+    baseline-on-migrate: true
